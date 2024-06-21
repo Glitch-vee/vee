@@ -1,0 +1,126 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#hero {
+    background: url('hero-background.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+}
+
+#about, #skills, #projects, #contact {
+    padding: 60px 0;
+}
+
+#about {
+    background: #f8f9fa;
+}
+
+#skills .progress {
+    margin-bottom: 20px;
+}
+
+#skills .progress-bar {
+    background-color: #007bff;
+}
+
+#projects .project-item {
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#projects .project-item img {
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+#projects .project-info {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 123, 255, 0.8);
+    width: 100%;
+    padding: 20px;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(100%);
+}
+
+#projects .project-item:hover img {
+    transform: scale(1.1);
+}
+
+#projects .project-item:hover .project-info {
+    transform: translateY(0);
+}
+
+#contact {
+    background: #ffffff;
+}
+
+.contact .php-email-form {
+    width: 100%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    background: #fff;
+}
+
+.contact .php-email-form .form-group {
+    margin-bottom: 25px;
+}
+
+.contact .php-email-form .form-control {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+}
+
+.contact .php-email-form button[type="submit"] {
+    background: #007bff;
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    transition: 0.4s;
+}
+
+.contact .php-email-form button[type="submit"]:hover {
+    background: #0056b3;
+}
+
+.footer {
+    background: #007bff;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    #hero {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+}

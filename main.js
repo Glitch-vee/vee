@@ -37,4 +37,15 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('An error occurred');
         }
     });
+
+    // Handle accordion behavior for skills section
+    document.querySelectorAll('.collapse').forEach(function (collapse) {
+        collapse.addEventListener('shown.bs.collapse', function () {
+            document.querySelectorAll('.collapse').forEach(function (otherCollapse) {
+                if (otherCollapse !== collapse) {
+                    otherCollapse.classList.remove('show');
+                }
+            });
+        });
+    });
 });

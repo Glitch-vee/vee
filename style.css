@@ -146,6 +146,49 @@ section {
 }
 
 /* Contact Section */
+.contact .section-title h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.contact .list-inline {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact .list-inline-item {
+    margin: 20px;
+    text-align: center;
+    flex: 1 1 auto;
+}
+
+.contact .list-inline-item a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: transform 0.3s;
+}
+
+.contact .list-inline-item a:hover {
+    transform: scale(1.1);
+}
+
+.contact .list-inline-item img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+}
+
+.contact .list-inline-item p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
 #contact .form-group input, #contact .form-group textarea {
     border: 1px solid var(--primary-color);
     border-radius: 5px;

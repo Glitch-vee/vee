@@ -1,6 +1,5 @@
-/* style.css */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #333;
     margin: 0;
     padding: 0;
@@ -9,15 +8,15 @@ body {
 
 /* Aesthetic color palette */
 :root {
-    --primary-color: #4A90E2;
-    --secondary-color: #D32F2F;
-    --background-color: #F5F5F5;
+    --primary-color: #000;
+    --secondary-color: #fff;
+    --accent-color: #4A90E2;
     --text-color: #333;
 }
 
 /* Navbar */
 .navbar {
-    background-color: var(--background-color);
+    background-color: var(--secondary-color);
 }
 
 .navbar-brand {
@@ -25,22 +24,22 @@ body {
 }
 
 .nav-link {
-    color: var(--text-color);
+    color: var(--primary-color);
 }
 
 .nav-link:hover {
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 /* Hero Section */
 #hero {
-    background: url('path/to/hero-image.jpg') no-repeat center center/cover;
+    background: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #fff;
+    color: var(--secondary-color);
 }
 
 #hero h1 {
@@ -54,10 +53,10 @@ body {
 }
 
 #hero .btn {
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     border: none;
     padding: 1rem 2rem;
-    color: #fff;
+    color: var(--secondary-color);
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 5px;
@@ -65,7 +64,7 @@ body {
 }
 
 #hero .btn:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
 }
 
 /* Section Styles */
@@ -74,7 +73,7 @@ section {
 }
 
 .section-bg {
-    background-color: var(--background-color);
+    background-color: var(--secondary-color);
 }
 
 .section-title h2 {
@@ -91,19 +90,18 @@ section {
 }
 
 /* Skills Section */
-.skills .progress {
-    margin-bottom: 1.5rem;
-    background-color: #e0e0e0;
-    border-radius: 5px;
+.skills .card-header .btn {
+    color: var(--primary-color);
+    text-decoration: none;
 }
 
-.skills .progress-bar {
-    background-color: var(--primary-color);
+.skills .card-header .btn:hover {
+    color: var(--accent-color);
 }
 
-.skills .skill {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+.skills .card-body {
+    background-color: var(--secondary-color);
+    border-top: 1px solid var(--primary-color);
 }
 
 /* Projects Section */
@@ -132,7 +130,7 @@ section {
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.7);
-    color: #fff;
+    color: var(--secondary-color);
     padding: 1rem;
     text-align: center;
     transition: background 0.3s ease;
@@ -149,7 +147,7 @@ section {
 
 /* Contact Section */
 #contact .form-group input, #contact .form-group textarea {
-    border: 1px solid #ccc;
+    border: 1px solid var(--primary-color);
     border-radius: 5px;
     padding: 0.75rem;
     width: 100%;
@@ -157,10 +155,10 @@ section {
 }
 
 #contact button {
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     border: none;
     padding: 0.75rem 1.5rem;
-    color: #fff;
+    color: var(--secondary-color);
     font-size: 1rem;
     text-transform: uppercase;
     border-radius: 5px;
@@ -168,16 +166,16 @@ section {
 }
 
 #contact button:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
 }
 
 /* Footer */
 .footer {
-    background-color: var(--background-color);
+    background-color: var(--secondary-color);
     padding: 2rem 0;
 }
 
 .footer p {
     margin: 0;
-    color: var(--text-color);
+    color: var(--primary-color);
 }

@@ -162,11 +162,11 @@ section {
 }
 
 .skills .card-header button:focus {
-    color: var(--primary-color);
-outline: none;
-background colour: #333;
-
+    color: #fff;
+    outline: 2px dashed var(--primary-color); /* Example of a custom focus outline */
+    outline-offset: 4px;
 }
+
 
 .skills .card-header:hover button {
     color: #fff; 

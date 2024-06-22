@@ -42,14 +42,20 @@ body {
     color: var(--secondary-color);
 }
 
-#hero h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
+.hero-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 3rem; /* Adjust size as needed */
+    font-weight: bold;
+    color: #ffffff; /* White color for contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: add shadow for more visibility */
 }
 
-#hero p {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+.hero-subtitle {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem; /* Adjust size as needed */
+    font-weight: normal;
+    color: #ffffff; /* White color for contrast */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Optional: add shadow for more visibility */
 }
 
 #hero .btn {

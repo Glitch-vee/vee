@@ -131,6 +131,83 @@ section {
     align-items: center; /* Vertically center align the content */
 }
 
+/* Skills Section */
+.skills .card {
+    border: none;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills .card-header {
+    background-color: var(--secondary-color);
+    border-bottom: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.skills .card-header:hover {
+    background-color: var(--accent-color);
+}
+
+.skills .card-header button {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    background: none;
+    border: none;
+    outline: none;
+    transition: color 0.3s ease;
+}
+
+.skills .card-header button:focus {
+    color: var(--accent-color);
+}
+
+.skills .collapse {
+    transition: height 0.3s ease;
+}
+
+.skills .card-body {
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    border-top: 1px solid var(--primary-color);
+}
+
+/* My Works Section */
+.work-item {
+    padding: 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-item:hover {
+    background-color: var(--accent-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.work-item h4,
+.work-item p {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.work-item a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+.work-item a:hover {
+    color: inherit; /* Ensure the color doesn't change on hover */
+}
+
 /* My Works Section */
 .work-item {
     padding: 1rem;

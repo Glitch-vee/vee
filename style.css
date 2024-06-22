@@ -145,15 +145,13 @@ section {
     margin-bottom: 1rem;
 }
 
-.work-item h4 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--primary-color);
+.work-item h4 a {
+    color: #000; /* Default color, change as needed */
+    text-decoration: none; /* Remove underline */
 }
 
-.work-item p {
-    font-size: 1.125rem;
-    color: var(--text-color);
+.work-item h4 a:hover {
+    color: #007bff; /* Change color on hover */
 }
 
 /* Contact Section */

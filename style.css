@@ -158,11 +158,11 @@ section {
     background: none;
     border: none;
     outline: none;
-    transition: color 0.3s ease;
+   
 }
 
 .skills .card-header button:focus {
-    color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 .skills .collapse {
@@ -175,6 +175,7 @@ section {
     border-top: 1px solid var(--primary-color);
 }
 
+
 /* My Works Section */
 .work-item {
     padding: 1rem;
@@ -186,7 +187,7 @@ section {
 }
 
 .work-item:hover {
-    background-color: var(--accent-color);
+    background-color: #333; /* Change to a dark color */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -204,25 +205,9 @@ section {
     height: 100%;
 }
 
-.work-item a:hover {
-    color: inherit; /* Ensure the color doesn't change on hover */
-}
-
-/* My Works Section */
-.work-item {
-    padding: 1rem;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    margin-bottom: 1rem;
-}
-
-.work-item h4 a {
-    color: #000; /* Default color, change as needed */
-    text-decoration: none; /* Remove underline */
-}
-
-.work-item h4 a:hover {
-    color: #007bff; /* Change color on hover */
+.work-item a:hover,
+.work-item a:focus {
+    color: inherit; /* Ensure the color doesn't change on hover or focus */
 }
 
 /* Contact Section */

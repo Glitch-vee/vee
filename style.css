@@ -90,9 +90,13 @@ section {
 
 /* About Section */
 #about img {
-    border-radius: 50%;
+    border-radius: 10px; /* Rounded corners, change to 50% for a circle */
+    border: 2px solid #fff; /* White border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     max-width: 100%;
     height: auto;
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
 }
 
 .about .content h3 {
@@ -122,19 +126,9 @@ section {
     transform: scale(1.2);
 }
 
-/* Skills Section */
-.skills .card-header .btn {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-.skills .card-header .btn:hover {
-    color: var(--accent-color);
-}
-
-.skills .card-body {
-    background-color: var(--secondary-color);
-    border-top: 1px solid var(--primary-color);
+.about .row {
+    display: flex;
+    align-items: center; /* Vertically center align the content */
 }
 
 /* My Works Section */

@@ -132,6 +132,12 @@ section {
 }
 
 /* Skills Section */
+
+.skills-border {
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 20px;
+}
 .skills .card {
     border: none;
     margin-bottom: 1rem;

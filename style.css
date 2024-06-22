@@ -162,11 +162,14 @@ section {
 }
 
 .skills .card-header button:focus {
-    color: var(--primary-color); /* Keep the color consistent */
+    color: var(--primary-color);
+outline: none;
+background colour: #333;
+
 }
 
 .skills .card-header:hover button {
-    color: #fff; /* Change text color to white on hover */
+    color: #fff; 
 }
 
 .skills .collapse {

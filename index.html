@@ -3,84 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alvee Alam's Portfolio</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Alvee Alam | Modern Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="#">Alvee Alam</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
     <!-- Hero Section -->
-    <section id="hero" class="d-flex align-items-center">
-        <div class="container text-center" data-aos="fade-up">
-            <h1 class="hero-title">Alvee Alam</h1>
-            <p class="hero-subtitle">Innovative solutions for a better tomorrow.</p>
-            <a href="#about" class="btn btn-primary">Learn More</a>
+    <section id="hero" class="vh-100 d-flex align-items-center text-white" style="background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;">
+        <div class="container text-center">
+            <h1 class="display-1 fw-bold">Alvee Alam</h1>
+            <p class="lead mt-4">Innovating Tomorrow Through <span class="text-warning">Art</span>, <span class="text-info">Business</span>, and <span class="text-success">Research</span>.</p>
+            <a href="#about" class="btn btn-lg btn-primary mt-4">Discover More</a>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="py-5">
-        <div class="container" data-aos="fade-up">
+        <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-right">
                     <img src="https://via.placeholder.com/500" alt="Profile" class="img-fluid rounded shadow">
                 </div>
-                <div class="col-md-6">
-                    <h2>About Me</h2>
-                    <p class="text-muted">I am a biotechnologist, data analyst, and business enthusiast. I bring innovative solutions to complex problems through my expertise in biotechnology and data analysis.</p>
-                    <ul>
+                <div class="col-md-6" data-aos="fade-left">
+                    <h2 class="fw-bold">About Me</h2>
+                    <p class="text-muted">I am a biotechnologist, data analyst, and business enthusiast dedicated to solving modern challenges with innovative solutions. My expertise spans technology, creativity, and entrepreneurship.</p>
+                    <ul class="list-unstyled">
                         <li><strong>Experience:</strong> 5+ years</li>
-                        <li><strong>Fields:</strong> Biotechnology, Data Analysis, Business Development</li>
-                        <li><strong>Hobbies:</strong> Writing, Art, and Research</li>
+                        <li><strong>Specializations:</strong> Biotechnology, Data Analysis, Business Strategy</li>
+                        <li><strong>Hobbies:</strong> Art, Writing, Research</li>
                     </ul>
+                    <a href="about.html" class="btn btn-outline-dark mt-3">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="bg-light py-5">
-        <div class="container" data-aos="fade-up">
-            <h2 class="text-center mb-5">My Skills</h2>
+    <!-- Abstract Section Divider -->
+    <div class="abstract-divider my-5" style="height: 150px; background: linear-gradient(to right, #ff6f61, #6c757d, #198754);"></div>
+
+    <!-- Focused Sections -->
+    <section id="focus" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Explore My Expertise</h2>
             <div class="row text-center">
-                <div class="col-md-4">
-                    <div class="skill-box">
-                        <img src="https://via.placeholder.com/100" alt="Leadership Icon" class="mb-3">
-                        <h4>Leadership</h4>
-                        <p>Proven ability to lead teams and manage projects successfully.</p>
-                    </div>
+                <!-- Art Section -->
+                <div class="col-md-4" data-aos="fade-up">
+                    <a href="art.html" class="card shadow-sm link-card">
+                        <div class="card-body">
+                            <img src="https://via.placeholder.com/100" alt="Art" class="mb-3">
+                            <h4>Art</h4>
+                            <p>Delve into my creative expressions and artistic endeavors.</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-md-4">
-                    <div class="skill-box">
-                        <img src="https://via.placeholder.com/100" alt="Problem Solving Icon" class="mb-3">
-                        <h4>Problem Solving</h4>
-                        <p>Expertise in identifying and addressing complex challenges.</p>
-                    </div>
+                <!-- Business Section -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="business.html" class="card shadow-sm link-card">
+                        <div class="card-body">
+                            <img src="https://via.placeholder.com/100" alt="Business" class="mb-3">
+                            <h4>Business</h4>
+                            <p>Explore my strategic projects and entrepreneurial ventures.</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-md-4">
-                    <div class="skill-box">
-                        <img src="https://via.placeholder.com/100" alt="Creativity Icon" class="mb-3">
-                        <h4>Creativity</h4>
-                        <p>Innovative thinking to develop unique solutions and designs.</p>
-                    </div>
+                <!-- Research Section -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <a href="research.html" class="card shadow-sm link-card">
+                        <div class="card-body">
+                            <img src="https://via.placeholder.com/100" alt="Research" class="mb-3">
+                            <h4>Research</h4>
+                            <p>Discover my contributions to cutting-edge research and innovation.</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -88,61 +83,35 @@
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="py-5">
-        <div class="container" data-aos="fade-up">
-            <h2 class="text-center mb-5">Portfolio</h2>
-            <div class="row">
-                <div class="col-md-4">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">My Portfolio</h2>
+            <div class="row g-4">
+                <!-- Portfolio Items -->
+                <div class="col-md-4" data-aos="zoom-in">
                     <div class="portfolio-item shadow-sm">
-                        <img src="https://via.placeholder.com/350" alt="Project 1" class="img-fluid rounded">
-                        <div class="portfolio-info">
-                            <h4>Project 1</h4>
-                            <p>Business Development</p>
+                        <img src="https://via.placeholder.com/350" alt="Portfolio 1" class="img-fluid rounded">
+                        <div class="portfolio-info p-3">
+                            <h5 class="fw-bold">Project Title</h5>
+                            <p class="text-muted">Brief description of the project.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
                     <div class="portfolio-item shadow-sm">
-                        <img src="https://via.placeholder.com/350" alt="Project 2" class="img-fluid rounded">
-                        <div class="portfolio-info">
-                            <h4>Project 2</h4>
-                            <p>Research and Data Analysis</p>
+                        <img src="https://via.placeholder.com/350" alt="Portfolio 2" class="img-fluid rounded">
+                        <div class="portfolio-info p-3">
+                            <h5 class="fw-bold">Project Title</h5>
+                            <p class="text-muted">Brief description of the project.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
                     <div class="portfolio-item shadow-sm">
-                        <img src="https://via.placeholder.com/350" alt="Project 3" class="img-fluid rounded">
-                        <div class="portfolio-info">
-                            <h4>Project 3</h4>
-                            <p>Creative Writing and Art</p>
+                        <img src="https://via.placeholder.com/350" alt="Portfolio 3" class="img-fluid rounded">
+                        <div class="portfolio-info p-3">
+                            <h5 class="fw-bold">Project Title</h5>
+                            <p class="text-muted">Brief description of the project.</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="bg-light py-5">
-        <div class="container" data-aos="fade-up">
-            <h2 class="text-center mb-5">What People Say</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="testimonial-box shadow-sm p-4">
-                        <p>"Alvee is an exceptional problem solver and leader. His innovative approach transformed our project outcomes."</p>
-                        <h5>- John Doe, CEO</h5>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-box shadow-sm p-4">
-                        <p>"His creativity and passion for excellence make him stand out. Truly inspiring to work with!"</p>
-                        <h5>- Jane Smith, Research Scientist</h5>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-box shadow-sm p-4">
-                        <p>"The dedication and expertise Alvee brought to our team were invaluable. Highly recommended!"</p>
-                        <h5>- Mark Johnson, Project Manager</h5>
                     </div>
                 </div>
             </div>
@@ -150,44 +119,48 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container" data-aos="fade-up">
-            <h2 class="text-center mb-5">Get in Touch</h2>
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Get in Touch</h2>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-right">
                     <ul class="list-unstyled">
                         <li><strong>Phone:</strong> +123-456-7890</li>
                         <li><strong>Email:</strong> alvee@example.com</li>
                         <li><strong>Address:</strong> 123 Main Street, City</li>
                     </ul>
                 </div>
-                <div class="col-md-6">
-                    <h4>Follow Me</h4>
-                    <div class="social-icons">
-                        <a href="#"><img src="https://img.icons8.com/material-outlined/24/000000/github.png" alt="GitHub"></a>
-                        <a href="#"><img src="https://img.icons8.com/material-outlined/24/000000/facebook-new.png" alt="Facebook"></a>
-                        <a href="#"><img src="https://img.icons8.com/material-outlined/24/000000/instagram-new.png" alt="Instagram"></a>
-                        <a href="#"><img src="https://img.icons8.com/material-outlined/24/000000/linkedin.png" alt="LinkedIn"></a>
-                    </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-dark">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer bg-light py-4">
+    <footer class="footer text-white py-4" style="background: #111;">
         <div class="container text-center">
             <p>&copy; 2024 Alvee Alam. All Rights Reserved.</p>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         AOS.init({
-            duration: 1000,
+            duration: 1200,
             once: true,
         });
     </script>

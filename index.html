@@ -6,15 +6,78 @@
     <title>Alvee Alam | Modern Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #1c1c1c;
+            color: #f8f9fa;
+        }
+
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+        }
+        #hero h1 {
+            font-size: 3.5rem;
+        }
+        #hero p {
+            color: #e9ecef;
+        }
+
+        /* Abstract Divider */
+        .abstract-divider {
+            height: 150px;
+            background: linear-gradient(45deg, #333, #555, #111);
+        }
+
+        /* Card Links */
+        .link-card {
+            background-color: #333;
+            color: #f8f9fa;
+            text-decoration: none;
+        }
+        .link-card:hover {
+            background-color: #444;
+            color: #ffc107;
+        }
+
+        /* Portfolio Items */
+        .portfolio-item img {
+            transition: transform 0.3s ease;
+        }
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        #contact form .form-control {
+            background-color: #222;
+            color: #fff;
+            border: 1px solid #444;
+        }
+        #contact form .form-control:focus {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #111;
+            color: #aaa;
+        }
+        .footer p {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <!-- Hero Section -->
-    <section id="hero" class="vh-100 d-flex align-items-center text-white" style="background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;">
-        <div class="container text-center">
+    <section id="hero" class="vh-100 d-flex align-items-center text-center">
+        <div class="container">
             <h1 class="display-1 fw-bold">Alvee Alam</h1>
             <p class="lead mt-4">Innovating Tomorrow Through <span class="text-warning">Art</span>, <span class="text-info">Business</span>, and <span class="text-success">Research</span>.</p>
-            <a href="#about" class="btn btn-lg btn-primary mt-4">Discover More</a>
+            <a href="#about" class="btn btn-lg btn-outline-light mt-4">Discover More</a>
         </div>
     </section>
 
@@ -22,10 +85,10 @@
     <section id="about" class="py-5">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6" data-aos="fade-right">
+                <div class="col-md-6">
                     <img src="https://via.placeholder.com/500" alt="Profile" class="img-fluid rounded shadow">
                 </div>
-                <div class="col-md-6" data-aos="fade-left">
+                <div class="col-md-6">
                     <h2 class="fw-bold">About Me</h2>
                     <p class="text-muted">I am a biotechnologist, data analyst, and business enthusiast dedicated to solving modern challenges with innovative solutions. My expertise spans technology, creativity, and entrepreneurship.</p>
                     <ul class="list-unstyled">
@@ -33,45 +96,45 @@
                         <li><strong>Specializations:</strong> Biotechnology, Data Analysis, Business Strategy</li>
                         <li><strong>Hobbies:</strong> Art, Writing, Research</li>
                     </ul>
-                    <a href="about.html" class="btn btn-outline-dark mt-3">Learn More</a>
+                    <a href="about.html" class="btn btn-outline-light mt-3">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Abstract Section Divider -->
-    <div class="abstract-divider my-5" style="height: 150px; background: linear-gradient(to right, #ff6f61, #6c757d, #198754);"></div>
+    <div class="abstract-divider"></div>
 
     <!-- Focused Sections -->
-    <section id="focus" class="py-5 bg-light">
+    <section id="focus" class="py-5">
         <div class="container">
             <h2 class="text-center fw-bold mb-5">Explore My Expertise</h2>
             <div class="row text-center">
                 <!-- Art Section -->
-                <div class="col-md-4" data-aos="fade-up">
+                <div class="col-md-4">
                     <a href="art.html" class="card shadow-sm link-card">
                         <div class="card-body">
-                            <img src="https://via.placeholder.com/100" alt="Art" class="mb-3">
+                            <i class="fas fa-paint-brush fa-3x mb-3"></i>
                             <h4>Art</h4>
                             <p>Delve into my creative expressions and artistic endeavors.</p>
                         </div>
                     </a>
                 </div>
                 <!-- Business Section -->
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-md-4">
                     <a href="business.html" class="card shadow-sm link-card">
                         <div class="card-body">
-                            <img src="https://via.placeholder.com/100" alt="Business" class="mb-3">
+                            <i class="fas fa-briefcase fa-3x mb-3"></i>
                             <h4>Business</h4>
                             <p>Explore my strategic projects and entrepreneurial ventures.</p>
                         </div>
                     </a>
                 </div>
                 <!-- Research Section -->
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="col-md-4">
                     <a href="research.html" class="card shadow-sm link-card">
                         <div class="card-body">
-                            <img src="https://via.placeholder.com/100" alt="Research" class="mb-3">
+                            <i class="fas fa-flask fa-3x mb-3"></i>
                             <h4>Research</h4>
                             <p>Discover my contributions to cutting-edge research and innovation.</p>
                         </div>
@@ -87,7 +150,7 @@
             <h2 class="text-center fw-bold mb-5">My Portfolio</h2>
             <div class="row g-4">
                 <!-- Portfolio Items -->
-                <div class="col-md-4" data-aos="zoom-in">
+                <div class="col-md-4">
                     <div class="portfolio-item shadow-sm">
                         <img src="https://via.placeholder.com/350" alt="Portfolio 1" class="img-fluid rounded">
                         <div class="portfolio-info p-3">
@@ -96,7 +159,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="col-md-4">
                     <div class="portfolio-item shadow-sm">
                         <img src="https://via.placeholder.com/350" alt="Portfolio 2" class="img-fluid rounded">
                         <div class="portfolio-info p-3">
@@ -105,7 +168,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
+                <div class="col-md-4">
                     <div class="portfolio-item shadow-sm">
                         <img src="https://via.placeholder.com/350" alt="Portfolio 3" class="img-fluid rounded">
                         <div class="portfolio-info p-3">
@@ -119,18 +182,18 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-light">
+    <section id="contact" class="py-5">
         <div class="container">
             <h2 class="text-center fw-bold mb-5">Get in Touch</h2>
             <div class="row">
-                <div class="col-md-6" data-aos="fade-right">
+                <div class="col-md-6">
                     <ul class="list-unstyled">
                         <li><strong>Phone:</strong> +123-456-7890</li>
                         <li><strong>Email:</strong> alvee@example.com</li>
                         <li><strong>Address:</strong> 123 Main Street, City</li>
                     </ul>
                 </div>
-                <div class="col-md-6" data-aos="fade-left">
+                <div class="col-md-6">
                     <form id="contactForm">
                         <div class="mb-3">
                             <input type="text" class="form-control" placeholder="Your Name" required>
@@ -141,7 +204,7 @@
                         <div class="mb-3">
                             <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-dark">Send Message</button>
+                        <button type="submit" class="btn btn-outline-light">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -149,7 +212,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer text-white py-4" style="background: #111;">
+    <footer class="footer py-4">
         <div class="container text-center">
             <p>&copy; 2024 Alvee Alam. All Rights Reserved.</p>
         </div>
@@ -159,8 +222,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
+        const animationDuration = 1200; // Configurable duration
         AOS.init({
-            duration: 1200,
+            duration: animationDuration,
             once: true,
         });
     </script>

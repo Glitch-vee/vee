@@ -1,39 +1,80 @@
+/* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    color: #333;
+    color: var(--text-color);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: linear-gradient(135deg, #f0f0f0, #ffffff);
+    scroll-behavior: smooth;
 }
 
-/* Aesthetic color palette */
 :root {
-    --primary-color: #000;
-    --secondary-color: #fff;
-    --accent-color: #4A90E2;
-    --text-color: #333;
+    --primary-color: #1a1a1a;
+    --secondary-color: #ffffff;
+    --accent-color: #ff6f61;
+    --text-color: #555555;
+    --hover-bg-color: #f4f4f4;
+    --transition-duration: 0.4s;
+}
+
+/* Utility Classes */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
 }
 
 /* Navbar */
 .navbar {
-    background-color: var(--secondary-color);
+    background: var(--primary-color);
+    padding: 1rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar-brand {
-    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    transition: color var(--transition-duration);
+    text-decoration: none;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
 }
 
 .nav-link {
-    color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: color var(--transition-duration);
+    text-decoration: none;
 }
 
 .nav-link:hover {
     color: var(--accent-color);
+    font-weight: bold;
+    transform: scale(1.1);
 }
 
 /* Hero Section */
 #hero {
-    background: url('https://i.ibb.co/44j6GPj/20240524-112635-copy-1530x2040.jpg') no-repeat center center/cover;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),
+        url('https://i.ibb.co/44j6GPj/20240524-112635-copy-1530x2040.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -43,260 +84,192 @@ body {
 }
 
 .hero-title {
-    font-family: 'Arial', sans-serif;
-    font-size: 3rem; /* Adjust size as needed */
-    font-weight: bold;
-    color: #ffffff; /* White color for contrast */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: add shadow for more visibility */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    animation: fade-in-down var(--transition-duration) ease-out;
+    margin: 0;
 }
 
 .hero-subtitle {
-    font-family: 'Arial', sans-serif;
-    font-size: 1.5rem; /* Adjust size as needed */
-    font-weight: normal;
-    color: #ffffff; /* White color for contrast */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Optional: add shadow for more visibility */
+    font-size: 1.8rem;
+    margin: 1rem 0 1.5rem;
+    animation: fade-in-up var(--transition-duration) ease-out;
 }
 
 #hero .btn {
-    background-color: var(--accent-color);
-    border: none;
-    padding: 1rem 2rem;
-    color: var(--secondary-color);
+    background: var(--accent-color);
+    border-radius: 25px;
+    padding: 1rem 3rem;
     text-transform: uppercase;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: var(--secondary-color);
+    transition: all var(--transition-duration);
+    border: none;
+    cursor: pointer;
 }
 
 #hero .btn:hover {
-    background-color: var(--primary-color);
+    background: var(--secondary-color);
+    color: var(--accent-color);
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Section Styles */
-section {
-    padding: 4rem 2rem;
-}
-
-.section-bg {
-    background-color: var(--secondary-color);
+/* Section Titles */
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .section-title h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
     color: var(--primary-color);
+    border-bottom: 4px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 0.5rem;
 }
 
 /* About Section */
 #about img {
-    border-radius: 10px; /* Rounded corners, change to 50% for a circle */
-    border: 2px solid #fff; /* White border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 20px;
+    transition: transform var(--transition-duration), box-shadow var(--transition-duration);
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto; /* Center the image horizontally */
+}
+
+#about img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .about .content h3 {
     font-size: 2rem;
-    margin-bottom: 1rem;
     color: var(--primary-color);
+    margin-bottom: 1rem;
 }
 
 .about .content p {
     font-size: 1.125rem;
     color: var(--text-color);
-}
-
-.about .social-icons a {
-    margin: 0 10px;
-    display: inline-block;
-    color: var(--primary-color);
+    line-height: 1.6;
 }
 
 .about .social-icons a img {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s;
+    width: 30px;
+    height: 30px;
+    transition: transform 0.5s;
 }
 
 .about .social-icons a:hover img {
-    transform: scale(1.2);
-}
-
-.about .row {
-    display: flex;
-    align-items: center; /* Vertically center align the content */
+    transform: rotate(360deg) scale(1.2);
 }
 
 /* Skills Section */
-
 .skills-border {
-    border: 2px solid #000;
-    border-radius: 5px;
+    border: 3px dashed var(--primary-color);
     padding: 20px;
-}
-.skills .card {
-    border: none;
-    margin-bottom: 1rem;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    background: var(--hover-bg-color);
+    border-radius: 10px;
 }
 
 .skills .card-header {
-    background-color: var(--secondary-color);
-    border-bottom: none;
+    font-size: 1.5rem;
+    border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    background: var(--accent-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    transition: transform var(--transition-duration), background var(--transition-duration);
+    border-radius: 10px;
 }
 
 .skills .card-header:hover {
-    background-color: #333; /* Change to a dark color */
-}
-
-.skills .card-header button {
-    width: 100%;
-    text-align: left;
-    padding: 1rem;
-    font-size: 1.25rem;
-    color: var(--primary-color);
-    background: none;
-    border: none;
-    outline: none;
-    transition: color 0.3s ease; /* Add transition for smooth color change */
-}
-
-.skills .card-header button:focus {
-    color: #fff;
-    outline: none;
-    var(--primary-color);
-    
-}
-
-
-.skills .card-header:hover button {
-    color: #fff; 
-}
-
-.skills .collapse {
-    transition: height 0.3s ease;
+    transform: scale(1.05);
+    background: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .skills .card-body {
+    background: var(--hover-bg-color);
+    color: var(--text-color);
+    font-size: 1.1rem;
     padding: 1rem;
-    background-color: var(--secondary-color);
-    border-top: 1px solid var(--primary-color);
 }
 
-
-/* My Works Section */
+/* Works Section */
 .work-item {
-    padding: 1rem;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    margin-bottom: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    background: var(--hover-bg-color);
+    border-radius: 15px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform var(--transition-duration), box-shadow var(--transition-duration);
 }
 
 .work-item:hover {
-    background-color: #333; /* Change to a dark color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #fff; /* Change text color to white on hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .work-item h4,
 .work-item p {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
     margin: 0;
-    color: var(--primary-color);
-    transition: color 0.3s ease; /* Add transition for smooth color change */
 }
 
-.work-item:hover h4,
-.work-item:hover p {
-    color: #fff; /* Change text color to white on hover */
-}
-
-.work-item a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    width: 100%;
-    height: 100%;
-}
-
-.work-item a:hover,
-.work-item a:focus {
-    color: inherit; /* Ensure the color doesn't change on hover or focus */
+.work-item a:hover {
+    color: var(--accent-color);
 }
 
 /* Contact Section */
-.contact .section-title h2 {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 2rem;
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.contact .contact-link {
-    display: block;
-    margin: 20px 0;
-    text-align: center;
-    text-decoration: none;
-    color: var(--primary-color);
-    transition: transform 0.3s, color 0.3s;
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: box-shadow var(--transition-duration);
 }
 
-.contact .contact-link img {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 10px;
+.contact input:focus,
+.contact textarea:focus {
+    box-shadow: 0 0 8px var(--accent-color);
+    outline: none;
 }
 
-.contact .contact-link p {
-    margin: 0;
-    font-size: 1.25rem;
-}
-
-.contact .contact-link:hover {
-    transform: scale(1.05);
-    color: var(--accent-color);
+.contact .btn {
+    width: fit-content;
+    align-self: flex-start;
 }
 
 /* Footer */
 .footer {
-    background-color: var(--secondary-color);
+    background: linear-gradient(to right, var(--primary-color), #000000);
     padding: 2rem 0;
-}
-
-.footer p {
-    margin: 0;
-    color: var(--primary-color);
-}
-
-.footer h5 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-}
-
-.footer .social-icons a {
-    margin: 0 10px;
-    display: inline-block;
-    color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
 }
 
 .footer .social-icons a img {
     width: 24px;
     height: 24px;
-    transition: transform 0.3s;
+    transition: transform 0.5s;
 }
 
 .footer .social-icons a:hover img {
     transform: scale(1.2);
-}
-
-.footer p, .footer ul {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
 }

@@ -1,248 +1,117 @@
-/* General Styles */
+/* Global Styling */
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background: #1b1b1b;
+    color: #e0e0e0;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    color: #333;
-    background: #f8f9fa;
-    scroll-behavior: smooth;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Buttons */
-.btn-primary {
-    background: linear-gradient(135deg, #ff6f61, #d63384);
-    border: none;
-    color: #fff;
-    font-size: 1rem;
-    padding: 0.8rem 2rem;
-    border-radius: 30px;
-    transition: background 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.btn-primary:hover {
-    background: linear-gradient(135deg, #d63384, #ff6f61);
-    transform: scale(1.05);
 }
 
 /* Hero Section */
 #hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    background: linear-gradient(to bottom, rgba(17, 17, 17, 0.8), rgba(0, 0, 0, 0.7)), 
-        url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
-    height: 100vh;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in-out;
 }
 
-#hero .display-1 {
+#hero h1 {
     font-size: 4rem;
+    letter-spacing: 0.1rem;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+    animation: slideInFromLeft 1.5s ease-in-out;
 }
 
 #hero p {
     font-size: 1.5rem;
-    margin-top: 1rem;
-    line-height: 1.8;
-}
-
-#hero .btn-primary {
-    margin-top: 2rem;
-}
-
-/* Abstract Divider */
-.abstract-divider {
-    background: linear-gradient(to right, #ff6f61, #6c757d, #198754);
-    height: 150px;
-    clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 100%);
+    color: #b5b5b5;
 }
 
 /* About Section */
-#about {
-    padding: 4rem 2rem;
+#about h2 {
+    color: #f4f4f4;
+    border-bottom: 2px solid #888;
+    display: inline-block;
+    margin-bottom: 1rem;
+    animation: bounceIn 1.5s ease-in-out;
 }
 
 #about img {
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-#about img:hover {
-    transform: scale(1.05);
-}
-
-#about h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-}
-
-#about p {
-    font-size: 1.125rem;
-    line-height: 1.8;
-    color: #555;
-}
-
-#about .btn-outline-dark {
-    border: 2px solid #333;
-    color: #333;
-    border-radius: 30px;
-    padding: 0.6rem 1.5rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-#about .btn-outline-dark:hover {
-    background: #333;
-    color: #fff;
-}
-
-/* Focus Section */
-#focus .card {
-    border: none;
-    background: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#focus .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-#focus .card-body img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 1rem;
-}
-
-#focus h4 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+    border: 5px solid #333;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 /* Portfolio Section */
-#portfolio .portfolio-item {
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+#portfolio .portfolio-item img {
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-#portfolio .portfolio-item:hover {
+#portfolio .portfolio-item:hover img {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.3);
+}
+
+/* Focused Sections */
+.link-card {
+    border: 1px solid #555;
+    transition: transform 0.4s, background 0.4s;
+}
+
+.link-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background: #2d2d2d;
+    color: #ffc107 !important;
 }
 
-#portfolio img {
-    border-bottom: 4px solid #ff6f61;
-}
-
-#portfolio .portfolio-info {
-    background: #ffffff;
-    padding: 1rem;
-    text-align: center;
-}
-
-#portfolio .portfolio-info h5 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #333;
-}
-
-#portfolio .portfolio-info p {
-    font-size: 1rem;
-    color: #555;
-    margin-top: 0.5rem;
-}
-
-/* Contact Section */
-#contact {
-    padding: 4rem 2rem;
-    background: #f8f9fa;
-}
-
-#contact h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-#contact ul {
-    list-style: none;
-    padding: 0;
-}
-
-#contact ul li {
-    font-size: 1.125rem;
-    margin-bottom: 1rem;
-}
-
-#contact form .form-control {
-    border-radius: 30px;
-    padding: 1rem;
-    font-size: 1rem;
+/* Contact Form */
+#contact .form-control {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: #ccc;
     transition: box-shadow 0.3s ease;
 }
 
-#contact form .form-control:focus {
-    box-shadow: 0 0 8px rgba(255, 111, 97, 0.5);
-    outline: none;
-}
-
-#contact button {
-    border-radius: 30px;
-    padding: 0.6rem 1.5rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-#contact button:hover {
-    background: #ff6f61;
-    color: #fff;
+#contact .form-control:focus {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
 /* Footer */
 .footer {
     background: #111;
-    color: #fff;
-    padding: 2rem 1rem;
-}
-
-.footer p {
-    font-size: 0.9rem;
-    margin: 0;
-}
-
-.footer .social-icons img {
-    width: 30px;
-    height: 30px;
-    margin: 0 0.5rem;
-    transition: transform 0.3s ease;
-}
-
-.footer .social-icons img:hover {
-    transform: scale(1.2);
+    text-align: center;
+    padding: 1.5rem 0;
+    color: #777;
 }
 
 /* Animations */
-[data-aos] {
-    transition: transform 0.8s ease, opacity 0.8s ease;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }

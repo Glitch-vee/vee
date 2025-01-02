@@ -53,7 +53,9 @@ header ul li a:hover {
 #hero h1 {
     font-size: 4rem;
     letter-spacing: 2px;
-    animation: fadeInDown 1.5s ease-in-out;
+    animation: fadeInDown 1.5s ease-in-out, rotate 5s linear infinite;
+    transform-origin: 50% 50%;
+    perspective: 1000px;
 }
 
 #hero p {
@@ -276,6 +278,15 @@ footer {
     }
     100% {
         transform: translate(0, 0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
     }
 }
 

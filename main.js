@@ -1,70 +1,91 @@
-// Initialize AOS (Animate On Scroll) Library
-document.addEventListener('DOMContentLoaded', () => {
-    AOS.init({
-        duration: 1200, // Animation duration in milliseconds
-        once: true, // Animations occur only once
-        easing: 'ease-in-out', // Smooth easing for animations
+// Wait for the DOM to load
+document.addEventListener("DOMContentLoaded", () => {
+    // Smooth scrolling
+    const smoothScroll = (target) => {
+      document.querySelector(target).scrollIntoView({
+        behavior: "smooth",
+      });
+    };
+  
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        smoothScroll(this.getAttribute("href"));
+      });
     });
-
-    // Smooth Scrolling for Navigation Links
-    const navLinks = document.querySelectorAll('a[href^="#"]');
-    navLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  
+    // Floating shapes animation
+    const floatingShapes = document.querySelectorAll(".floating-shapes .shape");
+    const animateShapes = () => {
+      floatingShapes.forEach((shape) => {
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight;
+        shape.style.transform = `translate(${x}px, ${y}px)`;
+      });
+    };
+  
+    setInterval(animateShapes, 4000);
+  
+    // Scroll-based animations
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-visible");
+          } else {
+            entry.target.classList.remove("animate-visible");
+          }
         });
+      },
+      { threshold: 0.3 }
+    );
+  
+    document.querySelectorAll(".animate__animated").forEach((el) => observer.observe(el));
+  
+    // Responsive adjustments
+    const adjustResponsive = () => {
+      const isMobile = window.innerWidth < 768;
+      const heroText = document.querySelector("#hero h1");
+      heroText.style.fontSize = isMobile ? "2.5rem" : "4rem";
+      heroText.style.letterSpacing = isMobile ? "0.05rem" : "0.1rem";
+    };
+  
+    window.addEventListener("resize", adjustResponsive);
+    adjustResponsive();
+  
+    // Portfolio hover effects
+    document.querySelectorAll(".portfolio-item").forEach((item) => {
+      item.addEventListener("mouseenter", () => {
+        item.style.transform = "scale(1.05)";
+        item.style.boxShadow = "0 10px 20px rgba(255, 255, 255, 0.3)";
+      });
+      item.addEventListener("mouseleave", () => {
+        item.style.transform = "scale(1)";
+        item.style.boxShadow = "0 5px 10px rgba(0, 0, 0, 0.5)";
+      });
     });
-
-    // Interactive Hover Effects for Cards in Focus Section
-    const focusCards = document.querySelectorAll('#focus .card');
-    focusCards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            card.style.transform = 'translateY(-10px)';
-            card.style.boxShadow = '0 12px 30px rgba(0, 0, 0, 0.2)';
-        });
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0)';
-            card.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.1)';
-        });
+  
+    // Contact form validation
+    const contactForm = document.querySelector("#contact form");
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+  
+      const name = contactForm.querySelector("input[placeholder='Your Name']").value.trim();
+      const email = contactForm.querySelector("input[placeholder='Your Email']").value.trim();
+      const message = contactForm.querySelector("textarea").value.trim();
+  
+      if (!name || !email || !message) {
+        alert("All fields are required!");
+        return;
+      }
+  
+      if (!/\S+@\S+\.\S+/.test(email)) {
+        alert("Please enter a valid email address!");
+        return;
+      }
+  
+      alert("Thank you for reaching out! I will get back to you soon.");
+      contactForm.reset();
     });
-
-    // Interactive Portfolio Hover Effects
-    const portfolioItems = document.querySelectorAll('#portfolio .portfolio-item');
-    portfolioItems.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            item.style.transform = 'scale(1.05)';
-            item.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.15)';
-        });
-        item.addEventListener('mouseleave', () => {
-            item.style.transform = 'scale(1)';
-            item.style.boxShadow = 'none';
-        });
-    });
-
-    // Contact Form Submission with Feedback (Simulated)
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-
-            // Create Feedback Loader
-            const loader = document.createElement('div');
-            loader.className = 'form-loader';
-            loader.textContent = 'Sending...';
-            contactForm.appendChild(loader);
-
-            // Simulate Form Submission Delay
-            setTimeout(() => {
-                loader.textContent = 'Message Sent Successfully!';
-                loader.style.color = '#28a745'; // Success Color
-
-                // Remove Loader After 3 Seconds
-                setTimeout(() => {
-                    loader.remove();
-                }, 3000);
-            }, 2000);
-        });
-    }
-});
+  });
+  

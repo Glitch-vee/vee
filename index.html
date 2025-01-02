@@ -3,230 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alvee Alam | Modern Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css">
+    <title>Dynamic Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #1c1c1c;
-            color: #f8f9fa;
-        }
-
-        /* Hero Section */
-        #hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
-        }
-        #hero h1 {
-            font-size: 3.5rem;
-        }
-        #hero p {
-            color: #e9ecef;
-        }
-
-        /* Abstract Divider */
-        .abstract-divider {
-            height: 150px;
-            background: linear-gradient(45deg, #333, #555, #111);
-        }
-
-        /* Card Links */
-        .link-card {
-            background-color: #333;
-            color: #f8f9fa;
-            text-decoration: none;
-        }
-        .link-card:hover {
-            background-color: #444;
-            color: #ffc107;
-        }
-
-        /* Portfolio Items */
-        .portfolio-item img {
-            transition: transform 0.3s ease;
-        }
-        .portfolio-item:hover img {
-            transform: scale(1.05);
-        }
-
-        /* Contact Section */
-        #contact form .form-control {
-            background-color: #222;
-            color: #fff;
-            border: 1px solid #444;
-        }
-        #contact form .form-control:focus {
-            background-color: #333;
-            color: #fff;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: #111;
-            color: #aaa;
-        }
-        .footer p {
-            margin: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="main.js"></script>
 </head>
 <body>
+    <!-- Header -->
+    <header class="bg-dark text-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="fw-bold">My Portfolio</h1>
+            <nav>
+                <ul class="d-flex list-unstyled m-0">
+                    <li><a href="#hero" class="text-white text-decoration-none px-3">Home</a></li>
+                    <li><a href="#about" class="text-white text-decoration-none px-3">About</a></li>
+                    <li><a href="#services" class="text-white text-decoration-none px-3">Services</a></li>
+                    <li><a href="#portfolio" class="text-white text-decoration-none px-3">Portfolio</a></li>
+                    <li><a href="#contact" class="text-white text-decoration-none px-3">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <!-- Hero Section -->
-    <section id="hero" class="vh-100 d-flex align-items-center text-center">
+    <section id="hero" class="vh-100 text-white text-center d-flex align-items-center position-relative">
         <div class="container">
-            <h1 class="display-1 fw-bold">Alvee Alam</h1>
-            <p class="lead mt-4">Innovating Tomorrow Through <span class="text-warning">Art</span>, <span class="text-info">Business</span>, and <span class="text-success">Research</span>.</p>
-            <a href="#about" class="btn btn-lg btn-outline-light mt-4">Discover More</a>
+            <h1 class="display-1 fw-bold text-uppercase animate__animated animate__fadeInDown">Welcome to My World</h1>
+            <p class="lead mt-4 animate__animated animate__fadeInUp">Where Creativity Meets Innovation</p>
+            <a href="#about" class="btn btn-outline-light btn-lg mt-4 animate__animated animate__pulse animate__infinite">Discover More</a>
+        </div>
+        <div class="floating-shapes">
+            <div class="shape circle"></div>
+            <div class="shape square"></div>
+            <div class="shape triangle"></div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-5">
+    <section id="about" class="py-5 bg-dark text-white">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6">
-                    <img src="https://via.placeholder.com/500" alt="Profile" class="img-fluid rounded shadow">
+                <div class="col-md-6 animate__animated animate__fadeInLeft">
+                    <img src="https://via.placeholder.com/500" alt="About Me" class="img-fluid rounded shadow-lg">
                 </div>
-                <div class="col-md-6">
-                    <h2 class="fw-bold">About Me</h2>
-                    <p class="text-muted">I am a biotechnologist, data analyst, and business enthusiast dedicated to solving modern challenges with innovative solutions. My expertise spans technology, creativity, and entrepreneurship.</p>
+                <div class="col-md-6 animate__animated animate__fadeInRight">
+                    <h2 class="fw-bold mb-4">About Me</h2>
+                    <p class="mb-3">I am a passionate creator with a love for design, development, and problem-solving. With years of experience in the tech industry, I specialize in crafting meaningful experiences.</p>
                     <ul class="list-unstyled">
-                        <li><strong>Experience:</strong> 5+ years</li>
-                        <li><strong>Specializations:</strong> Biotechnology, Data Analysis, Business Strategy</li>
-                        <li><strong>Hobbies:</strong> Art, Writing, Research</li>
+                        <li><strong>Expertise:</strong> Web Development, UX/UI Design</li>
+                        <li><strong>Experience:</strong> 7+ years</li>
+                        <li><strong>Hobbies:</strong> Art, Writing, Coding</li>
                     </ul>
-                    <a href="about.html" class="btn btn-outline-light mt-3">Learn More</a>
+                    <a href="#services" class="btn btn-outline-light mt-4">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Abstract Section Divider -->
-    <div class="abstract-divider"></div>
-
-    <!-- Focused Sections -->
-    <section id="focus" class="py-5">
-        <div class="container">
-            <h2 class="text-center fw-bold mb-5">Explore My Expertise</h2>
-            <div class="row text-center">
-                <!-- Art Section -->
+    <!-- Services Section -->
+    <section id="services" class="py-5 text-white bg-black">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-5">What I Offer</h2>
+            <div class="row">
                 <div class="col-md-4">
-                    <a href="art.html" class="card shadow-sm link-card">
-                        <div class="card-body">
-                            <i class="fas fa-paint-brush fa-3x mb-3"></i>
-                            <h4>Art</h4>
-                            <p>Delve into my creative expressions and artistic endeavors.</p>
-                        </div>
-                    </a>
+                    <div class="service-box shadow-lg p-4">
+                        <i class="fas fa-laptop-code fa-3x mb-3 text-primary"></i>
+                        <h4>Web Development</h4>
+                        <p>Creating responsive, fast, and modern websites tailored to your needs.</p>
+                    </div>
                 </div>
-                <!-- Business Section -->
                 <div class="col-md-4">
-                    <a href="business.html" class="card shadow-sm link-card">
-                        <div class="card-body">
-                            <i class="fas fa-briefcase fa-3x mb-3"></i>
-                            <h4>Business</h4>
-                            <p>Explore my strategic projects and entrepreneurial ventures.</p>
-                        </div>
-                    </a>
+                    <div class="service-box shadow-lg p-4">
+                        <i class="fas fa-pencil-alt fa-3x mb-3 text-warning"></i>
+                        <h4>Creative Design</h4>
+                        <p>Transforming ideas into stunning visuals with creativity and precision.</p>
+                    </div>
                 </div>
-                <!-- Research Section -->
                 <div class="col-md-4">
-                    <a href="research.html" class="card shadow-sm link-card">
-                        <div class="card-body">
-                            <i class="fas fa-flask fa-3x mb-3"></i>
-                            <h4>Research</h4>
-                            <p>Discover my contributions to cutting-edge research and innovation.</p>
-                        </div>
-                    </a>
+                    <div class="service-box shadow-lg p-4">
+                        <i class="fas fa-chart-line fa-3x mb-3 text-success"></i>
+                        <h4>Business Solutions</h4>
+                        <p>Providing strategic advice to elevate your business performance.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="py-5">
+    <section id="portfolio" class="py-5 bg-dark text-white">
         <div class="container">
-            <h2 class="text-center fw-bold mb-5">My Portfolio</h2>
+            <h2 class="fw-bold text-center mb-5">My Work</h2>
             <div class="row g-4">
-                <!-- Portfolio Items -->
                 <div class="col-md-4">
-                    <div class="portfolio-item shadow-sm">
-                        <img src="https://via.placeholder.com/350" alt="Portfolio 1" class="img-fluid rounded">
-                        <div class="portfolio-info p-3">
-                            <h5 class="fw-bold">Project Title</h5>
-                            <p class="text-muted">Brief description of the project.</p>
+                    <div class="portfolio-item shadow-lg">
+                        <img src="https://via.placeholder.com/350" alt="Project 1" class="img-fluid rounded">
+                        <div class="p-3">
+                            <h5 class="fw-bold">Project One</h5>
+                            <p>A brief description of the project goes here.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="portfolio-item shadow-sm">
-                        <img src="https://via.placeholder.com/350" alt="Portfolio 2" class="img-fluid rounded">
-                        <div class="portfolio-info p-3">
-                            <h5 class="fw-bold">Project Title</h5>
-                            <p class="text-muted">Brief description of the project.</p>
+                    <div class="portfolio-item shadow-lg">
+                        <img src="https://via.placeholder.com/350" alt="Project 2" class="img-fluid rounded">
+                        <div class="p-3">
+                            <h5 class="fw-bold">Project Two</h5>
+                            <p>A brief description of the project goes here.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="portfolio-item shadow-sm">
-                        <img src="https://via.placeholder.com/350" alt="Portfolio 3" class="img-fluid rounded">
-                        <div class="portfolio-info p-3">
-                            <h5 class="fw-bold">Project Title</h5>
-                            <p class="text-muted">Brief description of the project.</p>
+                    <div class="portfolio-item shadow-lg">
+                        <img src="https://via.placeholder.com/350" alt="Project 3" class="img-fluid rounded">
+                        <div class="p-3">
+                            <h5 class="fw-bold">Project Three</h5>
+                            <p>A brief description of the project goes here.</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5 bg-black text-white">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-5">What People Say</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p>"Incredible work! Highly recommend for all design needs."</p>
+                        <footer class="blockquote-footer text-white">John Doe</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p>"Very professional and creative. Exceeded expectations!"</p>
+                        <footer class="blockquote-footer text-white">Jane Smith</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p>"Delivered quality results on time. Couldn't ask for more."</p>
+                        <footer class="blockquote-footer text-white">Mike Lee</footer>
+                    </blockquote>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5">
+    <section id="contact" class="py-5 bg-dark text-white">
         <div class="container">
-            <h2 class="text-center fw-bold mb-5">Get in Touch</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <ul class="list-unstyled">
-                        <li><strong>Phone:</strong> +123-456-7890</li>
-                        <li><strong>Email:</strong> alvee@example.com</li>
-                        <li><strong>Address:</strong> 123 Main Street, City</li>
-                    </ul>
+            <h2 class="text-center fw-bold mb-5">Contact Me</h2>
+            <form>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <input type="text" class="form-control form-control-lg" placeholder="Your Name" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="email" class="form-control form-control-lg" placeholder="Your Email" required>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <form id="contactForm">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-outline-light">Send Message</button>
-                    </form>
+                <textarea class="form-control form-control-lg mb-3" rows="5" placeholder="Your Message" required></textarea>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-outline-light btn-lg">Send Message</button>
                 </div>
-            </div>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer py-4">
-        <div class="container text-center">
-            <p>&copy; 2024 Alvee Alam. All Rights Reserved.</p>
-        </div>
+    <footer class="py-4 bg-black text-center text-white">
+        <p>&copy; 2025 Your Name. All Rights Reserved.</p>
     </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        const animationDuration = 1200; // Configurable duration
-        AOS.init({
-            duration: animationDuration,
-            once: true,
-        });
-    </script>
 </body>
 </html>

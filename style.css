@@ -3,8 +3,8 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000;
-    color: #fff;
+    background-color: #fff; /* Change background color to white */
+    color: #000; /* Change text color to black */
     overflow-x: hidden;
 }
 
@@ -13,37 +13,20 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(255, 255, 255, 0.9); /* Change header background to white */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-header ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-header ul li {
-    display: inline-block;
-}
-
-header ul li a {
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: color 0.3s ease, background 0.3s ease;
-}
-
 header ul li a:hover {
-    background: #ff5733;
-    color: #fff;
+    background: #ffc107; /* Use vibrant yellow for hover */
+    color: #000; /* Change hover text color to black */
     border-radius: 5px;
 }
 
 /* Hero Section */
 #hero {
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,21 +36,19 @@ header ul li a:hover {
 #hero h1 {
     font-size: 4rem;
     letter-spacing: 2px;
-    animation: fadeInDown 1.5s ease-in-out, rotate 5s linear infinite;
-    transform-origin: 50% 50%;
-    perspective: 1000px;
+    animation: fadeInDown 1.5s ease-in-out; /* Remove rotate animation for a simple fade-in effect */
 }
 
 #hero p {
     font-size: 1.5rem;
-    color: #ccc;
+    color: #666; /* Use a darker gray for contrast */
     animation: fadeInUp 1.5s ease-in-out;
 }
 
 #hero a {
     padding: 10px 30px;
-    border: 2px solid #fff;
-    color: #fff;
+    border: 2px solid #000; /* Change border color to black */
+    color: #000; /* Change text color to black */
     text-transform: uppercase;
     text-decoration: none;
     font-size: 1.2rem;
@@ -77,62 +58,32 @@ header ul li a:hover {
 }
 
 #hero a:hover {
-    background: #ff5733;
-    color: #000;
+    background: #ffc107; /* Change hover background to yellow */
+    color: #fff;
 }
 
 /* Floating Shapes */
-.floating-shapes {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
-}
-
-.floating-shapes .shape {
-    position: absolute;
-    animation: float 5s infinite alternate ease-in-out;
-}
-
 .floating-shapes .circle {
-    top: 15%;
-    left: 10%;
-    width: 100px;
-    height: 100px;
-    background: #ff5733;
-    border-radius: 50%;
+    background: #ffc107; /* Vibrant yellow */
 }
 
 .floating-shapes .square {
-    bottom: 10%;
-    left: 20%;
-    width: 80px;
-    height: 80px;
-    background: #28a745;
+    background: #28a745; /* Light green */
 }
 
 .floating-shapes .triangle {
-    top: 40%;
-    right: 10%;
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 100px solid #ffc107;
+    border-bottom: 100px solid #ff5733; /* Orange */
 }
 
 /* About Section */
 #about {
-    background: #1a1a1a;
+    background: #f9f9f9; /* Light background for contrast */
     padding: 5rem 0;
 }
 
 #about img {
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Use dark shadow for contrast */
     transition: transform 0.3s ease;
 }
 
@@ -143,12 +94,12 @@ header ul li a:hover {
 /* Services Section */
 #services {
     padding: 5rem 0;
-    background: #000;
-    color: #fff;
+    background: #fff; /* White background */
+    color: #000; /* Black text */
 }
 
 .service-box {
-    background: #1a1a1a;
+    background: #f9f9f9; /* Light background for contrast */
     border-radius: 10px;
     padding: 2rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -156,7 +107,7 @@ header ul li a:hover {
 
 .service-box:hover {
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Use dark shadow for contrast */
 }
 
 /* Portfolio Section */
@@ -182,26 +133,26 @@ header ul li a:hover {
 }
 
 .portfolio-item:hover {
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Use dark shadow for contrast */
 }
 
 /* Testimonials Section */
 #testimonials {
     padding: 5rem 0;
-    background: #111;
-    color: #fff;
+    background: #f9f9f9; /* Light background for contrast */
+    color: #000; /* Black text */
     text-align: center;
 }
 
 blockquote {
     font-style: italic;
     font-size: 1.2rem;
-    background: #1a1a1a;
+    background: #fff;
     padding: 1.5rem;
-    border-left: 5px solid #ff5733;
+    border-left: 5px solid #ffc107; /* Vibrant yellow border */
     border-radius: 5px;
     margin: 0 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Dark shadow */
 }
 
 /* Contact Section */
@@ -210,8 +161,8 @@ blockquote {
 }
 
 #contact input, #contact textarea {
-    background: #1a1a1a;
-    color: #fff;
+    background: #fff;
+    color: #000;
     border: 2px solid #333;
     padding: 10px;
     margin-bottom: 20px;
@@ -220,12 +171,12 @@ blockquote {
 }
 
 #contact input:focus, #contact textarea:focus {
-    border-color: #ff5733;
+    border-color: #ffc107; /* Vibrant yellow on focus */
     outline: none;
 }
 
 #contact button {
-    background: #ff5733;
+    background: #000; /* Black background */
     color: #fff;
     border: none;
     padding: 10px 30px;
@@ -234,15 +185,15 @@ blockquote {
 }
 
 #contact button:hover {
-    background: #ffc107;
+    background: #ffc107; /* Change hover background to yellow */
     transform: scale(1.05);
 }
 
 /* Footer */
 footer {
     padding: 2rem 0;
-    background: #000;
-    color: #aaa;
+    background: #fff; /* White background */
+    color: #555; /* Darker text color */
     text-align: center;
 }
 
@@ -278,15 +229,6 @@ footer {
     }
     100% {
         transform: translate(0, 0);
-    }
-}
-
-@keyframes rotate {
-    from {
-        transform: rotateY(0deg);
-    }
-    to {
-        transform: rotateY(360deg);
     }
 }
 

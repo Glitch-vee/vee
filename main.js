@@ -1,4 +1,3 @@
-// Wait for the DOM to load
 document.addEventListener("DOMContentLoaded", () => {
     // Smooth scrolling
     const smoothScroll = (target) => {
@@ -58,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".portfolio-item").forEach((item) => {
         item.addEventListener("mouseenter", () => {
             item.style.transform = "scale(1.05)";
-            item.style.boxShadow = "0 10px 20px rgba(255, 255, 255, 0.3)";
+            item.style.boxShadow = "0 10px 20px rgba(0, 0, 0, 0.3)"; /* Use dark shadow for contrast */
         });
         item.addEventListener("mouseleave", () => {
             item.style.transform = "scale(1)";

@@ -12,7 +12,7 @@ body {
 /* Header */
 header {
     position: sticky;
-    top: 0;
+    top: 10;
     z-index: 1000;
     background-color: rgba(255, 255, 255, 0.9); /* Change header background to white */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

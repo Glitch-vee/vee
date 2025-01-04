@@ -63,6 +63,19 @@ document.addEventListener("DOMContentLoaded", () => {
             item.style.width = isMobile ? "100%" : "auto";
             item.style.marginBottom = isMobile ? "2rem" : "0";
         });
+
+        // Ensure elements have appropriate styles for mobile devices
+        document.querySelectorAll("section, .container").forEach((el) => {
+            el.style.padding = isMobile ? "1rem" : "2rem";
+        });
+
+        document.querySelectorAll("h2, h4, h5").forEach((el) => {
+            el.style.fontSize = isMobile ? "1.5rem" : "2rem";
+        });
+
+        document.querySelectorAll("p, li").forEach((el) => {
+            el.style.fontSize = isMobile ? "1rem" : "1.2rem";
+        });
     };
 
     window.addEventListener("resize", adjustResponsive);
@@ -86,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
 
         const name = contactForm.querySelector("input[placeholder='Your Name']").value.trim();
-        const email = contactForm.querySelector("input[placeholder='Your Email']")..value.trim();
+        const email = contactForm.querySelector("input[placeholder='Your Email']").value.trim();
         const message = contactForm.querySelector("textarea").value.trim();
 
         if (!name || !email || !message) {

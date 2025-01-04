@@ -13,19 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Floating shapes animation
-    const floatingShapes = document.querySelectorAll(".floating-shapes .shape");
-    const animateShapes = () => {
-        floatingShapes.forEach((shape) => {
-            const x = Math.random() * window.innerWidth;
-            const y = Math.random() * window.innerHeight;
-            shape.style.transform = `translate(${x}px, ${y}px)`;
-            shape.style.transition = "transform 4s ease-in-out";
-        });
-    };
-
-    setInterval(animateShapes, 4000);
-
     // Scroll-based animations
     const observer = new IntersectionObserver(
         (entries) => {
@@ -57,6 +44,25 @@ document.addEventListener("DOMContentLoaded", () => {
         const heroButton = document.querySelector("#hero a");
         heroButton.style.padding = isMobile ? "8px 20px" : "10px 30px";
         heroButton.style.fontSize = isMobile ? "1rem" : "1.2rem";
+
+        // Adjust portfolio items
+        document.querySelectorAll(".portfolio-item").forEach((item) => {
+            item.style.width = isMobile ? "100%" : "auto";
+            item.style.marginBottom = isMobile ? "2rem" : "0";
+        });
+
+        // Ensure elements have appropriate styles for mobile devices
+        document.querySelectorAll("section, .container").forEach((el) => {
+            el.style.padding = isMobile ? "1rem" : "2rem";
+        });
+
+        document.querySelectorAll("h2, h4, h5").forEach((el) => {
+            el.style.fontSize = isMobile ? "1.5rem" : "2rem";
+        });
+
+        document.querySelectorAll("p, li").forEach((el) => {
+            el.style.fontSize = isMobile ? "1rem" : "1.2rem";
+        });
     };
 
     window.addEventListener("resize", adjustResponsive);

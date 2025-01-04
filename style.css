@@ -19,6 +19,7 @@ header {
     padding: 0.5rem 1rem; /* Decrease padding */
     height: auto; /* Ensure the height adjusts based on content */
     line-height: 1.5; /* Adjust line-height for better spacing */
+    max-width: 100%; /* Ensure header fits within the viewport */
 }
 
 header ul li a:hover {
@@ -42,7 +43,7 @@ header ul li a:hover {
     height: 100vh;
     align-items: center;
     position: relative;
-}
+    max-width: 100%; /* Ensure hero section fits within the viewport */
 }
 
 #hero h1 {
@@ -52,12 +53,8 @@ header ul li a:hover {
 }
 
 #hero p {
-
     font-size: 1.5rem;
     color: #666; /* Use a darker gray for contrast */
-
-    font-size: 1.5em;
-    color: #fff; /* Use a darker gray for contrast */
     animation: fadeInUp 1.5s ease-in-out;
 }
 
@@ -78,7 +75,6 @@ header ul li a:hover {
     color: #fff;
 }
 
-
 /* About Section */
 #about {
     background: #f9f9f9; /* Light background for contrast */
@@ -89,7 +85,7 @@ header ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Use dark shadow for contrast */
     transition: transform 0.3s ease;
-    max-width: 100%; /* Add max-width: 100% to all image*/
+    max-width: 100%; /* Add max-width: 100% to all images */
 }
 
 #about img:hover {
@@ -245,4 +241,23 @@ footer {
     #hero h1 {
         font-size: 2.5rem;
     }
+}
 
+@media (max-width: 768px) {
+    header {
+        padding: 0.5rem; /* Adjust padding for smaller screens */
+    }
+
+    #hero h1 {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    }
+
+    #hero p {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+
+    #hero a {
+        padding: 8px 20px; /* Adjust button padding for smaller screens */
+        font-size: 1rem; /* Adjust button font size for smaller screens */
+    }
+}

@@ -54,8 +54,13 @@ header ul li a:hover {
 }
 
 #hero p {
+
     font-size: 1.5rem;
     color: #666; /* Use a darker gray for contrast */
+
+    font-size: 1.5em;
+    color: #fff; /* Use a darker gray for contrast */
+
     animation: fadeInUp 1.5s ease-in-out;
 }
 

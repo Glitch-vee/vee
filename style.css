@@ -16,12 +16,16 @@ header {
     z-index: 1000;
     background-color: rgba(255, 255, 255, 0.9); /* Change header background to white */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 1rem; /* Decrease padding */
+    height: auto; /* Ensure the height adjusts based on content */
+    line-height: 1.5; /* Adjust line-height for better spacing */
 }
 
 header ul li a:hover {
     background: #ffc107; /* Use vibrant yellow for hover */
     color: #fff; /* Change hover text color to black */
     border-radius: 5px;
+    padding: 0.5rem 1rem; /* Adjust padding for header links */
 }
 
 /* Hero Section */

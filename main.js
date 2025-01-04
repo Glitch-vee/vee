@@ -29,41 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelectorAll(".animate__animated").forEach((el) => observer.observe(el));
 
-    // Responsive adjustments
-    const adjustResponsive = () => {
-        const isMobile = window.innerWidth < 768;
-        const heroText = document.querySelector("#hero h1");
-        heroText.style.fontSize = isMobile ? "2.5rem" : "4rem";
-        heroText.style.letterSpacing = isMobile ? "0.05rem" : "0.1rem";
-
-        // Add responsive adjustments for other elements
-        const heroParagraph = document.querySelector("#hero p");
-        heroParagraph.style.fontSize = isMobile ? "1rem" : "1.5rem";
-        heroParagraph.style.marginTop = isMobile ? "1rem" : "2rem";
-
-        const heroButton = document.querySelector("#hero a");
-        heroButton.style.padding = isMobile ? "8px 20px" : "10px 30px";
-        heroButton.style.fontSize = isMobile ? "1rem" : "1.2rem";
-
-        // Adjust portfolio items
-        document.querySelectorAll(".portfolio-item").forEach((item) => {
-            item.style.width = isMobile ? "100%" : "auto";
-            item.style.marginBottom = isMobile ? "2rem" : "0";
-        });
-
-        // Ensure elements have appropriate styles for mobile devices
-        document.querySelectorAll("section, .container").forEach((el) => {
-            el.style.padding = isMobile ? "1rem" : "2rem";
-        });
-
-        document.querySelectorAll("h2, h4, h5").forEach((el) => {
-            el.style.fontSize = isMobile ? "1.5rem" : "2rem";
-        });
-
-        document.querySelectorAll("p, li").forEach((el) => {
-            el.style.fontSize = isMobile ? "1rem" : "1.2rem";
-        });
-    };
 
     window.addEventListener("resize", adjustResponsive);
     adjustResponsive();

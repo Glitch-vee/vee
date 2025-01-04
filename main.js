@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const floatingShapes = document.querySelectorAll(".floating-shapes .shape");
     const animateShapes = () => {
         floatingShapes.forEach((shape) => {
-            const x = Math.random() * window.innerWidth;
-            const y = Math.random() * window.innerHeight;
+            const x = Math.random() * (window.innerWidth - shape.clientWidth);
+            const y = Math.random() * (window.innerHeight - shape.clientHeight);
             shape.style.transform = `translate(${x}px, ${y}px)`;
             shape.style.transition = "transform 4s ease-in-out";
         });
@@ -57,6 +57,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const heroButton = document.querySelector("#hero a");
         heroButton.style.padding = isMobile ? "8px 20px" : "10px 30px";
         heroButton.style.fontSize = isMobile ? "1rem" : "1.2rem";
+
+        // Adjust portfolio items
+        document.querySelectorAll(".portfolio-item").forEach((item) => {
+            item.style.width = isMobile ? "100%" : "auto";
+            item.style.marginBottom = isMobile ? "2rem" : "0";
+        });
     };
 
     window.addEventListener("resize", adjustResponsive);
@@ -80,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
 
         const name = contactForm.querySelector("input[placeholder='Your Name']").value.trim();
-        const email = contactForm.querySelector("input[placeholder='Your Email']").value.trim();
+        const email = contactForm.querySelector("input[placeholder='Your Email']")..value.trim();
         const message = contactForm.querySelector("textarea").value.trim();
 
         if (!name || !email || !message) {

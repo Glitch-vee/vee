@@ -30,7 +30,7 @@ header ul li a:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('20250103_114147_0002.png');
+    background-image: url('20250103_114147_0002.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -107,7 +107,7 @@ header ul li a:hover {
 .service-box {
     background: #f9f9f9; /* Light background for contrast */
     border-radius: 10px;
-    padding: 1rem;
+    padding: 3rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%; /* Ensure all sections and containers have width: 100% */
 }

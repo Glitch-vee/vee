@@ -9,9 +9,7 @@ body {
     box-sizing: border-box; /* Add box-sizing: border-box to all elements */
 }
 
-*,
-*::before,
-*::after {
+{
     box-sizing: inherit; /* Add box-sizing: border-box to all elements */
 }
 
@@ -26,7 +24,7 @@ header {
 
 header ul li a:hover {
     background: #ffc107; /* Use vibrant yellow for hover */
-    color: #000; /* Change hover text color to black */
+    color: #fff; /* Change hover text color to black */
     border-radius: 5px;
 }
 
@@ -81,14 +79,6 @@ header ul li a:hover {
     color: #fff;
 }
 
-/* Floating Shapes */
-.floating-shapes .circle {
-    background: #ffc107; /* Vibrant yellow */
-}
-
-.floating-shapes .square {
-    background: #28a745; /* Light green */
-}
 
 /* About Section */
 #about {
@@ -148,7 +138,7 @@ header ul li a:hover {
 }
 
 .portfolio-item:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .portfolio-item:hover {

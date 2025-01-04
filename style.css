@@ -85,10 +85,6 @@ header ul li a:hover {
     background: #28a745; /* Light green */
 }
 
-.floating-shapes .triangle {
-    border-bottom: 100px solid #ff5733; /* Orange */
-}
-
 /* About Section */
 #about {
     background: #f9f9f9; /* Light background for contrast */

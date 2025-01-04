@@ -13,19 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Floating shapes animation
-    const floatingShapes = document.querySelectorAll(".floating-shapes .shape");
-    const animateShapes = () => {
-        floatingShapes.forEach((shape) => {
-            const x = Math.random() * (window.innerWidth - shape.clientWidth);
-            const y = Math.random() * (window.innerHeight - shape.clientHeight);
-            shape.style.transform = `translate(${x}px, ${y}px)`;
-            shape.style.transition = "transform 4s ease-in-out";
-        });
-    };
-
-    setInterval(animateShapes, 4000);
-
     // Scroll-based animations
     const observer = new IntersectionObserver(
         (entries) => {

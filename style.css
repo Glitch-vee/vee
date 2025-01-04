@@ -6,6 +6,13 @@ body {
     background-color: #fff; /* Change background color to white */
     color: #000; /* Change text color to black */
     overflow-x: hidden;
+    box-sizing: border-box; /* Add box-sizing: border-box to all elements */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit; /* Add box-sizing: border-box to all elements */
 }
 
 /* Header */
@@ -92,6 +99,7 @@ header ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Use dark shadow for contrast */
     transition: transform 0.3s ease;
+    max-width: 100%; /* Add max-width: 100% to all images */
 }
 
 #about img:hover {
@@ -110,6 +118,7 @@ header ul li a:hover {
     border-radius: 10px;
     padding: 2rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Ensure all sections and containers have width: 100% */
 }
 
 .service-box:hover {
@@ -126,6 +135,7 @@ header ul li a:hover {
     overflow: hidden;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Ensure all sections and containers have width: 100% */
 }
 
 .portfolio-item img {
@@ -133,6 +143,7 @@ header ul li a:hover {
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease;
+    max-width: 100%; /* Add max-width: 100% to all images */
 }
 
 .portfolio-item:hover img {
@@ -251,5 +262,39 @@ footer {
 
     .service-box {
         margin-bottom: 2rem;
+    }
+
+    /* Adjust styles for different screen sizes */
+    body {
+        font-size: 14px;
+    }
+
+    header ul li a {
+        padding: 5px 10px;
+    }
+
+    #about img {
+        max-width: 100%;
+    }
+
+    .service-box {
+        padding: 1rem;
+    }
+
+    .portfolio-item {
+        margin-bottom: 2rem;
+    }
+
+    blockquote {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    #contact input, #contact textarea {
+        padding: 8px;
+    }
+
+    #contact button {
+        padding: 8px 20px;
     }
 }

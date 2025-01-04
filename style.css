@@ -31,6 +31,15 @@ header ul li a:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
+    background-image: url('20250103_114147_0002.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
 }
 
 #hero h1 {

@@ -48,6 +48,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const heroText = document.querySelector("#hero h1");
         heroText.style.fontSize = isMobile ? "2.5rem" : "4rem";
         heroText.style.letterSpacing = isMobile ? "0.05rem" : "0.1rem";
+
+        // Add responsive adjustments for other elements
+        const heroParagraph = document.querySelector("#hero p");
+        heroParagraph.style.fontSize = isMobile ? "1rem" : "1.5rem";
+        heroParagraph.style.marginTop = isMobile ? "1rem" : "2rem";
+
+        const heroButton = document.querySelector("#hero a");
+        heroButton.style.padding = isMobile ? "8px 20px" : "10px 30px";
+        heroButton.style.fontSize = isMobile ? "1rem" : "1.2rem";
     };
 
     window.addEventListener("resize", adjustResponsive);

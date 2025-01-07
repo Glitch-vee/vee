@@ -1,23 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Smooth scrolling
-    const smoothScroll = (target) => {
-        document.querySelector(target).scrollIntoView({
-            behavior: "smooth",
-        });
-    };
-
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            smoothScroll(this.getAttribute("href"));
-        });
-    });
-
-
-    document.querySelectorAll(".animate__animated").forEach((el) => observer.observe(el));
-    
-
-    // Portfolio hover effects
+// Portfolio hover effects
     document.querySelectorAll(".portfolio-item").forEach((item) => {
         item.addEventListener("mouseenter", () => {
             item.style.transform = "scale(1.05)";

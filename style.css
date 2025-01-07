@@ -14,12 +14,12 @@ header {
     position: sticky;
     top: 10;
     z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.9); /* Change header background to white */
+    background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 0.5rem 1rem; /* Decrease padding */
-    height: auto; /* Ensure the height adjusts based on content */
-    line-height: 1.5; /* Adjust line-height for better spacing */
-    max-width: 100%; /* Ensure header fits within the viewport */
+    padding: 0.5rem 1rem; 
+    height: auto; 
+    line-height: 1.5; 
+    max-width: 100%; 
 }
 
 header ul li a:hover {
@@ -54,7 +54,7 @@ header ul li a:hover {
 
 #hero p {
     font-size: 1.5rem;
-    color: #666; /* Use a darker gray for contrast */
+    color: #fff; /* Use a darker gray for contrast */
     animation: fadeInUp 1.5s ease-in-out;
 }
 

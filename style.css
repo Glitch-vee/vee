@@ -103,7 +103,7 @@ header ul li a:hover {
     background: #f9f9f9; /* Light background for contrast */
     border-radius: 10px;
     padding: 3rem;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%; /* Ensure all sections and containers have width: 100% */
 }
@@ -153,6 +153,7 @@ blockquote {
     font-style: italic;
     font-size: 1.2rem;
     background: #fff;
+    color: #000
     padding: 1.5rem;
     border-left: 5px solid #ffc107; /* Vibrant yellow border */
     border-radius: 5px;

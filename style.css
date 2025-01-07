@@ -61,7 +61,7 @@ header ul li a:hover {
 #hero a {
     padding: 10px 30px;
     border: 2px solid #000; /* Change border color to black */
-    color: #000; /* Change text color to black */
+    color: #fff; /* Change text color to black */
     text-transform: uppercase;
     text-decoration: none;
     font-size: 1.2rem;

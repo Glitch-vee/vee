@@ -85,8 +85,8 @@ header ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Use dark shadow for contrast */
     transition: transform 0.3s ease;
-    max-width: 100%; /* Add max-width: 100% to all images */
-}
+    max-width: 100%; /* Ensure images do not overflow their container */
+    height: auto; /* Maintain aspect ratio */
 
 #about img:hover {
     transform: scale(1.05);
@@ -228,46 +228,70 @@ footer {
 
 
 
-/* Media Queries */
-@media (max-width: 100%) {
-    #hero h1 {
-        font-size: 2.5rem;
-    }
-}
 /* Extra small devices (phones, less than 576px) */
 @media (max-width: 575.98px) {
-    /* Styles for extra small devices */
+    body {
+        font-size: 14px; /* Adjust font size for small devices */
+    }
+    header ul li a {
+        padding: 0.3rem 0.6rem; /* Adjust padding for smaller screens */
+    }
+    #hero h1 {
+        font-size: 2.5rem; /* Adjust hero title size */
+    }
+    #hero p {
+        font-size: 1rem; /* Adjust hero paragraph size */
+    }
+    #hero a {
+        padding: 8px 20px; /* Adjust button padding */
+        font-size: 1rem; /* Adjust button font size */
+    }
+    .service-box, .portfolio-item {
+        padding: 2rem; /* Reduce padding for smaller screens */
+    }
 }
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* Styles for small devices */
+    body {
+        font-size: 14px; /* Adjust font size */
+    }
+    #hero h1 {
+        font-size: 2.5rem; /* Adjust hero title size */
+    }
+    #hero p {
+        font-size: 1rem; /* Adjust hero paragraph size */
+    }
+    #hero a {
+        padding: 8px 20px; /* Adjust button padding */
+        font-size: 1rem; /* Adjust button font size */
+    }
+    .service-box, .portfolio-item {
+        padding: 2rem; /* Reduce padding for smaller screens */
+    }
 }
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
-    /* Styles for medium devices */
+    body {
+        font-size: 15px; /* Adjust font size */
+    }
 }
 
 /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) {
-    /* Styles for large devices */
+    body {
+        font-size: 16px; /* Default font size */
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    /* Styles for extra large devices */
-}
-
-body {
-    font-size: 16px; /* Default font size */
-}
-
-@media (max-width: 767.98px) {
     body {
-        font-size: 14px; /* Adjust font size for small devices */
+        font-size: 16px; /* Default font size */
     }
 }
+
 
 .container {
     width: 100%; /* Full width on small devices */

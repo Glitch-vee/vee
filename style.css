@@ -9,6 +9,11 @@ body {
     box-sizing: border-box; /* Add box-sizing: border-box to all elements */
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Header */
 header {
     position: sticky;
@@ -27,6 +32,10 @@ header ul li a:hover {
     color: #fff; /* Change hover text color to black */
     border-radius: 5px;
     padding: 0.5rem 1rem; /* Adjust padding for header links */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
 }
 
 /* Hero Section */

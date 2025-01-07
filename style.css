@@ -35,8 +35,24 @@ header ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
 }
+
+    
+header .navbar-toggler {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+header .navbar-toggler-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    margin: 6px 0;
+}
+
+
 
 /* Hero Section */
 #hero {
@@ -301,6 +317,18 @@ footer {
     }
 }
 
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+    header .navbar-collapse {
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+    }
+
+    header .nav-link {
+        padding: 0.5rem 0;
+    }
+}
 
 .container {
     width: 100%; /* Full width on small devices */

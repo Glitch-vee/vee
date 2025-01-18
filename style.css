@@ -105,6 +105,13 @@ header .navbar-toggler-icon {
     background: #f9f9f9; /* Light background for contrast */
     padding: 1rem;
 }
+#about h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+}
+
 
 #about img {
     border-radius: 10px;
@@ -113,9 +120,11 @@ header .navbar-toggler-icon {
     max-width: 100%; /* Ensure images do not overflow their container */
     height: auto; /* Maintain aspect ratio */
 
-#about img:hover {
-    transform: scale(1.05);
+
 }
+#about img:hover {
+    transform: scale(1.05);}
+
 
 /* Services Section */
 #services {
